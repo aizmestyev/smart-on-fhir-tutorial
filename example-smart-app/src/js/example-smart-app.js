@@ -8,7 +8,7 @@
     }
 
     function onReady(smart)  {
-      if (false && smart.hasOwnProperty('patient')) {
+      if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
         var obv = smart.patient.api.fetchAll({
@@ -69,6 +69,8 @@
           ret.resolve(p);
         });
       } else {
+		  var p = defaultPatient();
+		  ret.resolve(p);
         onError();
       }
     }
