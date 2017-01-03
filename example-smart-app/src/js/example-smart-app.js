@@ -69,9 +69,7 @@
           ret.resolve(p);
         });
       } else {
-		  var p = defaultPatient();
-		  ret.resolve(p);
-     //   onError();
+        onError();
       }
     }
 
