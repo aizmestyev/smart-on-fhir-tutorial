@@ -17098,7 +17098,7 @@ BBClient.ready = function(input, callback, errback){
         token: tokenResponse.access_token
       };
     } else if (!state.fake_token_response){
-      return args.errback("Failed to obtain access token.");
+      return args.errback("Failed to obtain access token 1.");
     }
 
     var ret = FhirClient(fhirClientParams);
@@ -17107,7 +17107,7 @@ BBClient.ready = function(input, callback, errback){
     args.callback(ret);
 
   }).fail(function(){
-    args.errback("Failed to obtain access token.");
+    args.errback("Failed to obtain access token 2.");
   });
 
 };
